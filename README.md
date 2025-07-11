@@ -34,13 +34,36 @@ MultienvApp-main/
 ```
 
 ## Deployment Steps
-1. Clone or Extract the Repository
+### 1. Clone or Extract the Repository
 
 ```bash
 git clone https://github.com/govind02420/Multienv_deployment.git
 cd Multienv_deployment
 ```
-2. Build & Run with Docker Compose
+### 2. Docker & Docker Compose Setup
+   Install Docker
+```bash
+sudo apt update
+sudo apt install docker.io docker-compose -y
+```
+  Check Docker installation
+```bash
+docker --version
+docker-compose --version
+```
+### 3. Docker Configuration
+   Dockerfiles:
+    - backend/dev/Dockerfile
+    - backend/prod/Dockerfile
+    - frontend/Dockerfile
+
+* Each backend Dockerfile uses python:3.9-slim, installs requirements, and runs app.py.
+* The frontend Dockerfile uses node:18, builds React, and runs on port 3000.
+
+  docker-compose.yml:
+    - Defines 3 services (backend-dev, backend-prod, frontend) and their ports + environment variables.
+
+### 4. Build & Run with Docker Compose
 
 ```bash
 docker-compose up --build
