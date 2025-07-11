@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend-dev:
+    build: ./backend/dev
+    ports:
+      - "3001:3001"
+    environment:
+      - ENV=development
+
+  backend-prod:
+    build: ./backend/prod
+    ports:
+      - "3002:3002"
+    environment:
+      - ENV=production
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_DEV_URL=http://localhost:3001
+      - REACT_APP_PROD_URL=http://localhost:3002
+    depends_on:
+      - backend-dev
+      - backend-prod
