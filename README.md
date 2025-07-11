@@ -90,9 +90,10 @@ services:
 
 ## Testing Instructions
 After running docker-compose up --build, test the following in your browser:
-Frontend Dashboard
-Development Endpoint
-Production Endpoint
+
+1. Frontend Dashboard
+2. Development Endpoint
+3. Production Endpoint
 
 ## Screenshots
  1. docker ps showing all 3 services running
