@@ -94,7 +94,7 @@ Frontend Dashboard
 Development Endpoint
 Production Endpoint
 
-## Screenshots (Replace with yours)
+## Screenshots
  1. docker ps showing all 3 services running
  2. Browser access of frontend, /dev, and /prod
  3. docker-compose logs showing successful startup
