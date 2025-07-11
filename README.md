@@ -12,24 +12,26 @@ All services are containerized using **Docker** and orchestrated via **Docker Co
 
 ## 📁 Project Structure
 
+```bash
 MultienvApp-main/
 ├── docker-compose.yml
 ├── backend/
-│ ├── dev/
-│ │ ├── app.py
-│ │ ├── requirements.txt
-│ │ ├── Dockerfile
-│ │ └── .env
-│ └── prod/
-│ ├── app.py
-│ ├── requirements.txt
-│ ├── Dockerfile
-│ └── .env
+│   ├── dev/
+│   │   ├── app.py
+│   │   ├── requirements.txt
+│   │   ├── Dockerfile
+│   │   └── .env
+│   └── prod/
+│       ├── app.py
+│       ├── requirements.txt
+│       ├── Dockerfile
+│       └── .env
 └── frontend/
-├── src/
-├── public/
-├── Dockerfile
-└── package.json
+    ├── src/
+    ├── public/
+    ├── Dockerfile
+    └── package.json
+```
 
 ## Deployment Steps
 1. Clone or Extract the Repository
